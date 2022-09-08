@@ -24,7 +24,7 @@ train_x, test_x, train_y, test_y = train_test_split(
 pipe = Pipeline([("scaler", StandardScaler()), ("svc", SVC())])
 pipe.fit(train_x, train_y)
 
-run = mlfoundry.get_client().create_run(project_name="iris-classification")
+run = mlfoundry.get_client().create_run(project_name="iris-classification-badal")
 # NOTE:- We are saving the model using mlfoundry.
 # You can use any other model registry or blob storage.
 run.log_model(pipe, framework="sklearn")
