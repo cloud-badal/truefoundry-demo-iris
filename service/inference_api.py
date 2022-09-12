@@ -5,9 +5,11 @@ import pandas as pd
 from fastapi import FastAPI
 
 print(os.environ)
-RUN_FQN = os.getenv("MLF_RUN_FQN")
-run = mlfoundry.get_client().get_run(RUN_FQN)
-model = run.get_model()
+MODEL_FQN = os.getenv("MLF_MODEL_FQN")
+
+client = mlf.get_client()
+model_version = client.get_model(MODEL_FQN)
+model = model_version.load()
 
 app = FastAPI()
 
