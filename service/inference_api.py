@@ -1,6 +1,6 @@
 import os
 
-import mlfoundry
+import mlfoundry as mlf
 import pandas as pd
 from fastapi import FastAPI
 
