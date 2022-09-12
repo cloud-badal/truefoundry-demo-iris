@@ -30,5 +30,5 @@ pipe.fit(train_x, train_y)
 run = mlfoundry.get_client().create_run(project_name="iris-classification-badal")
 # NOTE:- We are saving the model using mlfoundry.
 # You can use any other model registry or blob storage.
-run.log_model(pipe, framework="sklearn")
+run.log_model(name="iris-model", model=pipe, framework="sklearn")
 run.log_metrics({"accuracy": pipe.score(test_x, test_y)})
