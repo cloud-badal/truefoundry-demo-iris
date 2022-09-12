@@ -1,0 +1,4 @@
+fastapi==0.81.0
+uvicorn==0.18.3
+mlfoundry==0.4.2
+scikit-learn==1.1.2
