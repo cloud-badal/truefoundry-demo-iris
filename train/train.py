@@ -1,9 +1,12 @@
+import os
 import mlfoundry
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+
+print(os.environ)
 
 x, y = load_iris(as_frame=True, return_X_y=True)
 x = x.rename(
