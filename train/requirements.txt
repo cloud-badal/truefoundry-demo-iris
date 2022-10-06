@@ -1,2 +1,2 @@
-mlfoundry==0.4.6
+mlfoundry==0.4.7
 scikit-learn==1.1.2
